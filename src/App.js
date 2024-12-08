@@ -1,8 +1,23 @@
 import logo from './logo.svg';
+import { Header, Hero, About, Portfolio, Skills, Contact, Footer } from './components';
 import './App.css';
 
 function App() {
   return (
+    <>
+      <Header />
+      <main>
+        <Hero />
+        <About />
+        <Portfolio />
+        <Skills />
+        <Contact />
+      </main>
+      <Footer />
+    </>
+  );
+
+  /*return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -19,7 +34,7 @@ function App() {
         </a>
       </header>
     </div>
-  );
+  );*/
 }
 
 export default App;
