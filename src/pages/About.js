@@ -1,10 +1,12 @@
 
 import React from "react";
+import { Header } from "../components";
 
 // pages/About.js
 function About() {
   return (
     <>
+      <Header />
       <div className="container mx-auto py-8">
         <h1 className="text-3xl font-bold mb-4">About Me</h1>
         <p>This is the about page.</p>
