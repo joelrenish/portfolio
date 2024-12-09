@@ -1,7 +1,6 @@
 
 import React, { useRef } from "react";
 import { Hero, Portfolio, Skills, Contact, Footer, Header } from "../components";
-import ContactForm from "../components/ContactForm";
 
 
 function Home() {
@@ -20,7 +19,6 @@ function Home() {
         <Hero />
         <Portfolio />
         <Skills />
-        <ContactForm />
       </main>
       <Footer />
     </>

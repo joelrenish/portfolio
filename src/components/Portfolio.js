@@ -26,7 +26,7 @@ function Portfolio() {
     },
   ];
   return (
-    <section id="portfolio" className="py-20 bg-gray-100">
+    <section id="portfolio" className="py-20 bg-secondary">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-3xl font-bold mb-8">Portfolio</h2>
         <div className="space-y-12">
@@ -58,7 +58,7 @@ function Portfolio() {
                 </p>
                 <a
                   href={project.link}
-                  className="mt-4 inline-block px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition-colors"
+                  className="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-lg shadow-md hover:bg-altprimary transition-colors"
                 >
                   View Details
                 </a>
