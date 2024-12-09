@@ -1,10 +1,8 @@
-
 import React, { useRef } from "react";
-import { Hero, Portfolio, Skills, Contact, Footer, Header } from "../components";
-
+import { Hero, Portfolio, Skills, Footer, Header } from "../components";
+import ScrollSpinner from "../components/ScrollSpinner"; // Import the spinner
 
 function Home() {
-
   const topRef = useRef(null);
 
   // Function to scroll to the top
@@ -21,6 +19,7 @@ function Home() {
         <Skills />
       </main>
       <Footer />
+      <ScrollSpinner /> {/* Add the spinner here */}
     </>
   );
 }

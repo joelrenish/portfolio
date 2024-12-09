@@ -3,7 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS CSS
 
 function Skills() {
-  const skills = ["HTML", "CSS", "JavaScript", "React", "Figma"];
+  const skills = ["HTML", "CSS", "JavaScript", "React", "Bootstrap", "Node.js", "Figma", "Adobe XD", "Axure RP"];
 
   useEffect(() => {
     AOS.init({
