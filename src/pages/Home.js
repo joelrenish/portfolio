@@ -19,7 +19,7 @@ function Home() {
         <Skills />
       </main>
       <Footer />
-      <ScrollSpinner /> {/* Add the spinner here */}
+      <ScrollSpinner />
     </>
   );
 }

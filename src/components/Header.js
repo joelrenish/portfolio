@@ -6,7 +6,7 @@ const Header = ({scrollToTop}) => {
     <header className="w-full bg-primary shadow-md py-6 z-50">
       <div className="container mx-auto flex justify-between items-center max-w-7xl">
         {/* Home Button */}
-        <Link to="/portfolio" onClick={scrollToTop} className="text-2xl font-bold text-secondary">
+        <Link to="/portfolio" onClick={scrollToTop} className="text-2xl font-bold text-secondary hover:text-black transition">
           Home
         </Link>
 

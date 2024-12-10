@@ -8,9 +8,6 @@ const Resume = () => {
     <>
       <Header />
       <div className="container mx-auto py-8">
-        <h1 className="text-4xl font-bold text-gray-800 text-center mb-8">
-          My Resume
-        </h1>
         <div className="shadow-lg rounded-lg overflow-hidden bg-white p-4">
           <Worker
             workerUrl={`https://unpkg.com/pdfjs-dist@3.6.172/build/pdf.worker.min.js`}
