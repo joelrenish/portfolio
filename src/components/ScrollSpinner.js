@@ -41,12 +41,13 @@ const ScrollSpinner = () => {
         xmlns="http://www.w3.org/2000/svg"
         onClick={scrollToTop} // Make the whole circle clickable
         style={{ cursor: showCircle ? "pointer" : "default" }} // Show pointer only when the circle is visible
+        color="white"
       >
         <circle
           cx="25"
           cy="25"
           r={radius}
-          stroke="#21392c" // Apply the color directly here using your theme's primary color
+          stroke="white" // Apply the color directly here using your theme's primary color
           strokeWidth="5"
           fill="transparent"
           strokeDasharray={circumference} // Full circumference

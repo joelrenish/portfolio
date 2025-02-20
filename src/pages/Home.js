@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { Hero, Portfolio, Skills, Footer, Header } from "../components";
 import ScrollSpinner from "../components/ScrollSpinner"; // Import the spinner
 
+
 function Home() {
   const topRef = useRef(null);
 

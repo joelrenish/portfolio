@@ -1,4 +1,4 @@
-import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
+import { FiArrowRight } from "react-icons/fi";
 import { motion, useTransform, useScroll } from "framer-motion";
 
 function Portfolio() {
@@ -7,15 +7,15 @@ function Portfolio() {
       id: 1,
       name: "Alliance of Angels Capstone",
       description:
-        "How I increased their member interaction by 200% for RSVPs and made it easier to form connections before monthly investor meetings.",
+        "How I increased their member interaction by 200% for RSVPs and made networking between startups and investors much simpler.",
       link: "#",
       image: "/portfolio/images/aoa_mockup.png",
     },
     {
       id: 2,
-      name: "Mewurk's HR Management System",
+      name: "Mewurk HRMS",
       description:
-        "My first dive into a professional programming environment, where I contributed to a large-scale project and collaborated with a team on front-end development, gaining valuable industry experience.",
+        "My first dive into a professional programming environment to make an HR Management System, where I contributed to a large-scale project and collaborated with a team on front-end development, gaining valuable industry experience.",
       link: "#",
       image: "/portfolio/images/mewurk_mockup.png",
     },
@@ -26,7 +26,7 @@ function Portfolio() {
         "At TerrificMinds, I designed multiple iterations of websites for various clients, refining my skills in user-centered design. I learned to craft seamless, intuitive user experiences that help users achieve their goals quickly and effectively, while balancing aesthetics and functionality.",
       link: "#",
       image: "/portfolio/images/terrificminds_mockup.png",
-    },
+    }
   ];
   return (
     <section id="portfolio" className="bg-secondary">
@@ -36,21 +36,23 @@ function Portfolio() {
           {projects.map((project, index) => (
             <div
               key={project.id}
-              className={`flex flex-col lg:flex-row items-center justify-between min-h-dvh gap-6`}
+              className={`flex flex-col lg:flex-row items-center lg:justify-between min-h-[80dvh] gap-6`}
             >
               {/* Project Image */}
               <div
-                className={`flex-[0 0 50%] ${index % 2 === 0 ? "lg:order-last" : ""}`}
+                className={`flex-[0 0 50%] ${index % 2 === 1 ? "lg:order-last" : ""}`}
               >
-                <img
-                  src={project.image}
-                  alt={project.name}
-                  className="w-full h-auto max-h-96 rounded-lg shadow-lg object-contain"
-                />
+                <a href={project.link}>
+                  <img
+                    src={project.image}
+                    alt={project.name}
+                    className="w-full h-auto max-h-96 rounded-lg shadow-lg object-contain hover:scale-105 transition-all"
+                  />
+                </a>
               </div>
 
               {/* Project Info */}
-              <div className={`flex-[0 0 50%] space-y-4 text-center lg:text-left`}>
+              <div className={`flex-[0 0 50%] space-y-4 text-center flex flex-col items-center justify-center`}>
                 <h3 className="text-5xl font-semibold mb-4 text-white">
                   {project.name}
                 </h3>
@@ -59,10 +61,10 @@ function Portfolio() {
                 </p>
                 <a
                   href={project.link}
-                  className="mt-4 inline-block px-6 py-3 bg-secondary text-white font-semibold rounded-lg shadow-md hover:bg-offgray transition-colors duration-500"
+                  className="group mt-4 inline-flex items-center px-6 py-3 bg-secondary text-primary font-semibold rounded-lg shadow-md hover:bg-offgray transition-colors duration-500"
                 >
-                  <MdOutlineKeyboardDoubleArrowRight className="inline pr-2 size-7"/>
-                  View Details
+                  Details
+                  <FiArrowRight className="inline ml-2 p-1 size-6 scale-50 -rotate-45 bg-primary group-hover:scale-100 group-hover:text-white rounded-full transition-all duration-500"/>
                 </a>
               </div>
             </div>
