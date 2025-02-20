@@ -1,3 +1,6 @@
+import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
+import { motion, useTransform, useScroll } from "framer-motion";
+
 function Portfolio() {
   const projects = [
     {
@@ -6,7 +9,7 @@ function Portfolio() {
       description:
         "How I increased their member interaction by 200% for RSVPs and made it easier to form connections before monthly investor meetings.",
       link: "#",
-      image: "/portfolio/images/aoa.png",
+      image: "/portfolio/images/aoa_mockup.png",
     },
     {
       id: 2,
@@ -14,7 +17,7 @@ function Portfolio() {
       description:
         "My first dive into a professional programming environment, where I contributed to a large-scale project and collaborated with a team on front-end development, gaining valuable industry experience.",
       link: "#",
-      image: "/portfolio/images/mewurk.png",
+      image: "/portfolio/images/mewurk_mockup.png",
     },
     {
       id: 3,
@@ -22,44 +25,43 @@ function Portfolio() {
       description:
         "At TerrificMinds, I designed multiple iterations of websites for various clients, refining my skills in user-centered design. I learned to craft seamless, intuitive user experiences that help users achieve their goals quickly and effectively, while balancing aesthetics and functionality.",
       link: "#",
-      image: "/portfolio/images/terrificminds.png",
+      image: "/portfolio/images/terrificminds_mockup.png",
     },
   ];
   return (
-    <section id="portfolio" className="py-20 bg-secondary">
+    <section id="portfolio" className="bg-secondary">
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-8">Portfolio</h2>
         <div className="space-y-12">
+          {/* Project Generator */}
           {projects.map((project, index) => (
             <div
               key={project.id}
-              className={`flex flex-col lg:flex-row items-center justify-between gap-8`}
-              data-aos="fade-up"
-              data-aos-delay={index * 200}
+              className={`flex flex-col lg:flex-row items-center justify-between min-h-dvh gap-6`}
             >
               {/* Project Image */}
               <div
-                className={`flex-1" ${index % 2 === 0 ? "lg:order-last" : ""}`}
+                className={`flex-[0 0 50%] ${index % 2 === 0 ? "lg:order-last" : ""}`}
               >
                 <img
                   src={project.image}
                   alt={project.name}
-                  className="w-full h-auto max-h-72 rounded-lg shadow-lg object-contain"
+                  className="w-full h-auto max-h-96 rounded-lg shadow-lg object-contain"
                 />
               </div>
 
-              {/* Project Text */}
-              <div
-                className={`flex-1 text-center`}
-              >
-                <h3 className="text-2xl font-semibold mb-4">{project.name}</h3>
-                <p className="mt-4 text-lg leading-relaxed max-w-xl break-words">
+              {/* Project Info */}
+              <div className={`flex-[0 0 50%] space-y-4 text-center lg:text-left`}>
+                <h3 className="text-5xl font-semibold mb-4 text-white">
+                  {project.name}
+                </h3>
+                <p className="mt-4 text-xl leading-relaxed max-w-xl break-words text-white">
                   {project.description}
                 </p>
                 <a
                   href={project.link}
-                  className="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-lg shadow-md hover:bg-altprimary transition-colors"
+                  className="mt-4 inline-block px-6 py-3 bg-secondary text-white font-semibold rounded-lg shadow-md hover:bg-offgray transition-colors duration-500"
                 >
+                  <MdOutlineKeyboardDoubleArrowRight className="inline pr-2 size-7"/>
                   View Details
                 </a>
               </div>
@@ -69,7 +71,6 @@ function Portfolio() {
       </div>
     </section>
   );
-
 }
 
 export default Portfolio;

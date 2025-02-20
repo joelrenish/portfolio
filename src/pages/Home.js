@@ -14,7 +14,7 @@ function Home() {
     <>
       <Header scrollToTop={scrollToTop} />
       <main ref={topRef}>
-        <Hero />
+        <Hero/>
         <Portfolio />
         <Skills />
       </main>

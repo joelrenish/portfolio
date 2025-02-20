@@ -1,19 +1,22 @@
 import React from "react";
-import { Worker, Viewer } from "@react-pdf-viewer/core";
 import { Header } from "../components";
-import "@react-pdf-viewer/core/lib/styles/index.css";
 
 const Resume = () => {
   return (
     <>
       <Header />
-      <div className="container mx-auto py-8">
-        <div className="shadow-lg rounded-lg overflow-hidden bg-white p-4">
-          <Worker
-            workerUrl={`https://unpkg.com/pdfjs-dist@3.6.172/build/pdf.worker.min.js`}
+      <div className="container mx-auto py-8" height="100vh">
+        <div className="shadow-lg rounded-lg overflow-hidden bg-white p-4" style={{ height: "100vh" }}>
+          <object
+            data="/portfolio/resume.pdf"
+            type="application/pdf"
+            width="100%"
+            height="100%"
           >
-            <Viewer fileUrl="/portfolio/resume.pdf" />
-          </Worker>
+            <p>
+              <a href="/portfolio/resume.pdf"> View my Resume </a>
+            </p>
+          </object>
         </div>
       </div>
     </>

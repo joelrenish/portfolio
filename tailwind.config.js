@@ -4,10 +4,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#ff386f', //main
-        secondary: '#fff6f7', //white
-        accent: '#21392c', //black
-        altprimary: "#cc053c", //gray
+        primary: '#9C84EF', // navbar/buttons
+        secondary: '#171717', // background
+        accent: '#fff6f7', // UNUSED
+        altprimary: "#7362AF", // hover button color
+        offwhite: "#a0a0a0",
+        offgray: "#505050"
       },
     },
   },
