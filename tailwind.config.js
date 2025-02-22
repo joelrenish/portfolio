@@ -9,7 +9,7 @@ module.exports = {
         accent: '#fff6f7', // white
         altprimary: "#7362AF", // hover button color
         offwhite: "#a0a0a0",
-        offgray: "#505050"
+        offgray: "#303030"
       },
     },
   },

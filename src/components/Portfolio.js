@@ -1,5 +1,6 @@
 import { FiArrowRight } from "react-icons/fi";
 import { motion, useTransform, useScroll } from "framer-motion";
+import { Link } from "react-router-dom";
 
 function Portfolio() {
   const projects = [
@@ -8,7 +9,7 @@ function Portfolio() {
       name: "Alliance of Angels Capstone",
       description:
         "How I increased their member interaction by 200% for RSVPs and made networking between startups and investors much simpler.",
-      link: "#",
+      link: "/aoa",
       image: "/portfolio/images/aoa_mockup.png",
     },
     {
@@ -16,20 +17,22 @@ function Portfolio() {
       name: "Mewurk HRMS",
       description:
         "My first dive into a professional programming environment to make an HR Management System, where I contributed to a large-scale project and collaborated with a team on front-end development, gaining valuable industry experience.",
-      link: "#",
+      link: "/mewurk",
       image: "/portfolio/images/mewurk_mockup.png",
     },
     {
       id: 3,
       name: "TerrificMinds Web Design",
       description:
-        "At TerrificMinds, I designed multiple iterations of websites for various clients, refining my skills in user-centered design. I learned to craft seamless, intuitive user experiences that help users achieve their goals quickly and effectively, while balancing aesthetics and functionality.",
-      link: "#",
+        "At TerrificMinds, I designed multiple iterations of websites for various clients, refining my skills in user-centered design. I learned to craft seamless, intuitive user experiences that help users achieve their goals quickly with a balance of aesthetics and functionality.",
+      link: "/terrificminds",
       image: "/portfolio/images/terrificminds_mockup.png",
     }
   ];
   return (
-    <section id="portfolio" className="bg-secondary">
+    <section id="portfolio" className="bg-secondary items-center">
+
+      <h1 className="text-3xl font-semibold my-4 text-white text-center">Case Studies</h1>
       <div className="max-w-7xl mx-auto px-4">
         <div className="space-y-12">
           {/* Project Generator */}
@@ -42,13 +45,17 @@ function Portfolio() {
               <div
                 className={`flex-[0 0 50%] ${index % 2 === 1 ? "lg:order-last" : ""}`}
               >
-                <a href={project.link}>
-                  <img
-                    src={project.image}
-                    alt={project.name}
-                    className="w-full h-auto max-h-96 rounded-lg shadow-lg object-contain hover:scale-105 transition-all"
-                  />
-                </a>
+                <Link
+                  to={project.link}
+                >
+                  <a href={project.link}>
+                    <img
+                      src={project.image}
+                      alt={project.name}
+                      className="w-full h-auto max-h-96 rounded-lg shadow-lg object-contain hover:scale-105 transition-all"
+                    />
+                  </a>
+                </Link>
               </div>
 
               {/* Project Info */}

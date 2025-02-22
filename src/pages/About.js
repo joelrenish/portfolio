@@ -4,13 +4,9 @@ import { Header } from "../components";
 // pages/About.js
 function About() {
   return (
-    <>
+    <div className="bg-secondary text-white">
       <Header />
-      <div className="container mx-auto py-8">
-        <h1 className="text-3xl font-bold mb-4">About Me</h1>
-        <p>This is the about page.</p>
-      </div>
-      <section id="about" className="py-20 bg-white">
+      <section id="about" className="py-20 py-20 pt-44">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold mb-4">About Me</h2>
           <p>
@@ -18,7 +14,7 @@ function About() {
           </p>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 
